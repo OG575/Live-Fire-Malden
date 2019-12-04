@@ -1,0 +1,66 @@
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//---------------------DESCRIPTION.EXT----------------------------------------//
+////////////////////////////////////////////////////////////////////////////////
+author			= "YonV";
+OnLoadName		= "OG575 Live Fire Training Map No Opcons";
+OnLoadMission	= "Welcome to the ARMY's low intelligence housing project";
+
+taskManagement_propagate = 1;
+taskManagement_markers3D = 1;
+
+////////////////////////////////////////////////////////////////////////////////
+// INCLUDES 																  //
+////////////////////////////////////////////////////////////////////////////////
+
+cba_settings_hasSettingsFile = 1; // load cba settings from cba_settings.sqf
+enableDebugConsole = 1; //Allows access to the Debug Console outside of the editor during normal gameplay.0 = Default behavior, available only in editor, 1 = Available in SP and for hosts / logged in admins, 2 = Available for everyone
+
+////////////////////////////////////////////////////////////////////////////////
+// CfgFunctions																 //
+////////////////////////////////////////////////////////////////////////////////
+class CfgFunctions {
+};
+
+////////////////////////////////////////////////////////////////////////////////
+// Extended_PreInit_EventHandlers								    	      //
+////////////////////////////////////////////////////////////////////////////////
+class Extended_PreInit_EventHandlers {
+};
+
+
+class Extended_InitPost_EventHandlers {
+};
+
+
+////////////////////////////////////////////////////////////////////////////////
+// CfgRemoteExec															  //
+////////////////////////////////////////////////////////////////////////////////
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+		mode = 2;
+		jip = 1;
+		class AR_Client_Rappel_From_Heli { allowedTargets=0; };
+		class AR_Hint { allowedTargets=1; };
+		class AR_Hide_Object_Global { allowedTargets=2; };
+		class AR_Enable_Rappelling_Animation { allowedTargets=2; };
+		class AR_Rappel_From_Heli { allowedTargets=4; };
+		class AUR_Hint { allowedTargets=1; };
+		class AUR_Hide_Object_Global { allowedTargets=2; };
+		class AUR_Enable_Rappelling_Animation_Global { allowedTargets=2; };
+		class AUR_Play_Rappelling_Sounds_Global { allowedTargets=2; };
+	};
+};
+
+////////////////////////////////////////////////////////////////////////////////
+// CfgSounds																  //
+////////////////////////////////////////////////////////////////////////////////
+class CfgSounds {
+	sounds[]={};
+ 
+};
+
+ 
